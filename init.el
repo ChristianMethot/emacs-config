@@ -1,5 +1,9 @@
+;; Melpa packages
+
 (add-to-list 'package-archives
              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+
+;; Custom variables
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -17,7 +21,7 @@
  ;; If there is more than one, they won't work right.
  )
 
-;; Remove the toolbar
+;; Remove toolbar
 (tool-bar-mode -1)
 
 ;; Set fonts
