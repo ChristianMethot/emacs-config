@@ -33,10 +33,6 @@
 
 (setq initial-buffer-choice "/Users/christianmethot/Library/CloudStorage/Dropbox/projets.org")
 
-;; Ispell dictionnary location
-
-(setq ispell-program-name "/opt/homebrew/opt/aspell/bin/aspell")
-
 ;; French correction mode for org files
 
 (defun french-correction-mode ()
@@ -46,8 +42,17 @@
 
 (add-hook 'org-mode-hook #'french-correction-mode)
 
+;; Ispell dictionnary location
+
+(setq ispell-program-name "/opt/homebrew/opt/aspell/bin/aspell")
+
+;; Keybindings modifier
+
+(when (eq system-type 'darwin)
+  (setq mac-right-option-modifier 'none))
+
 ;; Yasnippet mode
 
 (require 'yasnippet)
+(setq yas-snippet-dirs '("~/.emacs.d/snippets"))
 (yas-global-mode 1)
-
