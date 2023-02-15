@@ -1,1 +1,1 @@
-# My emacs configuration and yasnippets
+### My emacs configuration and yasnippets
