@@ -13,7 +13,7 @@
  '(custom-enabled-themes '(zenburn))
  '(custom-safe-themes
    '("c4cecd97a6b30d129971302fd8298c2ff56189db0a94570e7238bc95f9389cfb" default))
- '(package-selected-packages '(flyspell-correct magit zenburn-theme)))
+ '(package-selected-packages '(yasnippet auctex flyspell-correct magit zenburn-theme)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -21,21 +21,32 @@
  ;; If there is more than one, they won't work right.
  )
 
-;; Remove toolbar
+;; Window settings
+
+(add-to-list 'initial-frame-alist '(fullscreen . maximized))
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 (tool-bar-mode -1)
 
-;; Set fonts
 (set-face-attribute 'default nil :font "Source Code Pro-14" )
 (set-frame-font "Source Code Pro-14" nil t)
 
-;; Set ispell dictionnary location
+(setq initial-buffer-choice "/Users/christianmethot/Library/CloudStorage/Dropbox/projets.org")
+
+;; Ispell dictionnary location
+
 (setq ispell-program-name "/opt/homebrew/opt/aspell/bin/aspell")
 
 ;; French correction mode for org files
+
 (defun french-correction-mode ()
   (flyspell-mode)
   (ispell-change-dictionary "francais")
   )
 
 (add-hook 'org-mode-hook #'french-correction-mode)
+
+;; Yasnippet mode
+
+(yas-global-mode 1)
 
