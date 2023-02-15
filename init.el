@@ -21,7 +21,7 @@
  ;; If there is more than one, they won't work right.
  )
 
-;; Window settings
+;; Appearance settings
 
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
