@@ -1,6 +1,4 @@
-*
-
-!.gitignore
-!init.el
-!README.md
-!snippets/*
+auto-save-list/
+elpa/
+init.el~
+transient/
