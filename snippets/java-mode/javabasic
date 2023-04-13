@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: java 
+# key: %java
+# --
+
+import java.util.*;
+
+public class ${1:ClassName} {
+       public static void main(String[] args) {
+       	      $0
+       }
+}

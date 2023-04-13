@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>${$TITLE}</title>
+  <title>${1:TITLE}</title>
 </head>
 <body>
 
